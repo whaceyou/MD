@@ -1,5 +1,5 @@
 ```bash
-docker run \
+docker.md run \
 -p 3306:3306 \
 --name mysql \
 -v /mydata/mysql/log:/var/1og/mysql \
