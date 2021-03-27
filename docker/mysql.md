@@ -1,5 +1,5 @@
 ```bash
-docker.md run \
+docker run \
 -p 3306:3306 \
 --name mysql \
 -v /mydata/mysql/log:/var/1og/mysql \
@@ -10,6 +10,8 @@ docker.md run \
 ```
 
 ```bash
+cd /mydata/mysql/conf
+vi my.cnf
 [client]
 default-character-set=utf8
 
