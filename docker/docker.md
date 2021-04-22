@@ -55,7 +55,7 @@ sudo yum install -y yum-utils \
 
 - 设置 yum 仓库地址
 
-```c
+```shell
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 
 sudo yum-config-manager \
