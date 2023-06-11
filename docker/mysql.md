@@ -1,9 +1,18 @@
 ```bash
 docker run \
--p 3306:3306 \
---name mysql \
--v /mydata/mysql/data:/var/lib/mysql \
--v /mydata/mysql/conf.d:/etc/mysql/conf.d \
+-p 33080:3306 \
+--name mysql80 \
+-v /mydata/mysql80/data:/var/lib/mysql \
+-v /mydata/mysql80/conf.d:/etc/mysql/conf.d \
+-e MYSQL_ROOT_PASSWORD=poco1024! \
+-e MYSQL_DEFAULT_AUTHENTICATION_PLUGIN=mysql_native_password \
+-d mysql:8.0
+
+docker run \
+-p 33057:3306 \
+--name mysql57 \
+-v /mydata/mysql57/data:/var/lib/mysql \
+-v /mydata/mysql57/conf.d:/etc/mysql/conf.d \
 -e MYSQL_ROOT_PASSWORD=poco1024! \
 -d mysql:5.7
 ```
